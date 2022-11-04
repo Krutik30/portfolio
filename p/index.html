@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krutik Aghera</title>
+
+    <style>
+        ::-webkit-scrollbar{
+            display: none;
+        }
+
+        body{
+            background-color: rgb(35, 35, 35);
+            width: 100%;
+            height: 80%;
+            color: white;
+            margin: 0%;
+        }
+        .menubar{
+            position: fixed;
+            padding: 0%;
+            background-color: rgb(35, 35, 35);
+            width: 98%;
+            z-index: 3;
+        }
+        #logo{
+            display: inline-block;
+            width: 12%;
+            position: relative;
+            left: 4%;
+        }
+        .menu2{
+            display: inline-block;
+            height: 100%;
+            position: absolute;
+            right: 0%;
+            width: 85%;
+            text-align: right;
+        }
+        .menu{
+            display: inline;
+            position: relative;
+            top: 10%;
+            right: 2%;
+            margin: 1.5%;
+        }
+        .menul{
+            text-decoration: none;
+            padding: 1.5%;
+            color: white;
+        }
+        .menul:hover{
+            text-decoration: none;
+            padding: 1.5%;
+            border-radius: 5px;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+
+        }
+        .re{
+            background: white;
+            padding : 1.5%;
+            border-radius: 5px;
+            border: 1px solid grey;
+            color: white;
+            background-color: rgba(255, 255, 255, 0);
+        }
+        .re:hover{
+            background: white;
+            padding : 1.5%;
+            border-radius: 5px;
+            border: 1px solid grey;
+            color: white;
+            background-color: rgba(255, 255, 255,0.1)
+        }
+        .int{
+            width: 91%;
+            padding: 12% 0% 4% 8%;
+            text-align: center;
+        }
+        .name{
+            padding: 2%;
+            text-align: justify;
+            text-transform: capitalize;
+        }
+        .intro{
+            width: 50%;
+        }
+        
+        /* about */
+
+        #about{
+            padding: 8% 1% 1% 8%;
+        }
+        #about-page{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .row.col1{
+            flex-basis: 55%;
+        }
+        .kang{
+            margin: 4%;
+        }
+        .p2{
+            width: 60%;
+            text-align: justify;
+            margin: 0%;
+            margin-left: 4%;
+        }
+        .row.col2{
+            flex-basis: 40%;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .col2 img{
+            width: 40%;
+            margin: 2%;
+            border-radius: 5%;
+        }
+        .nav1{
+            margin: 3%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .tool{
+            padding: 2.5%;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+
+        }
+        .tool::after{
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ff004f;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: 1s;
+        }
+
+        .tool.active::after{
+            width: 50%;
+        }
+        
+        .tline{
+            width: 95%;
+            margin-left: 6%;
+            margin-top: 3%;
+            display: none;
+        }
+
+        .title{
+            color: #ff004f;
+            font-size: 120%;
+
+        }
+        .redt{
+            color: grey;
+            font-size: 95%;
+        }
+
+        .clink{
+            text-decoration: none;
+            color: rgb(125, 125, 125);
+            font-size: 95%;
+        }
+        .left{
+            width: 90%;
+        }
+        .right{
+            width: 85%;
+        }
+        .tline.active-t{
+            display: inline-block;
+        }
+
+        /* SKILLS */
+        #skill{
+            padding: 8% 0% 4% 10%;
+            text-align: center;
+        }
+        .sktitle{
+            padding-bottom: 1%;
+            color: #ff004f;
+            text-align: left;
+
+        }
+        .skills{
+            margin-left: 2%;
+            margin-bottom: 2%;
+            width: 70%;
+            text-align: center;
+
+        }
+        .scon{
+            display: inline-block;
+            width: 50%;
+        }
+        .simg{
+            display: inline-block;
+            width: 20%;
+            text-align: center;
+            margin: 5% 4% 0% 4%;
+        }
+        .subimg{
+            width: 80%;
+            background: white;
+            border-radius: 50%;
+
+        }
+        .subcon{
+            text-align: justify;
+            color: grey;
+        }
+
+        /* projects */
+
+        #project{
+            padding: 8% 0% 4% 10%;
+        }
+        #project-page{
+            padding-left: 4%;
+        }
+        .plink{
+            text-decoration: none;
+            color: white;
+        }
+        .pbox{
+            background: rgb(100, 100, 100);
+            border-radius: 10px;
+            margin: 2%;
+            display: inline-block;
+            width: 200px;
+            height: 250px;
+            box-shadow: 3px 3px 7px 3px rgb(140, 140, 140);
+        }
+        .igif{
+            margin: 10% 5% 10% 5%;
+            width: 180px;
+            height: 150px;
+            border-radius: 10px;
+        }
+        .itit{
+            margin: 3%;
+            text-align: center;
+        }
+        /* contact */
+        #contact{
+            padding: 1% 0% 1% 10%;
+            margin: 0.5%;
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px 3px rgb(140, 140, 140);
+        }
+        #contact-page{
+            padding-left: 10%;
+        }
+        #i1,#i2{
+            border: 2px solid rgb(231, 222, 222);
+            width: 29%;
+            height: 50px;
+            border-radius: 6px;
+            margin-right: 2%;
+            padding-left: 2%;
+        } 
+        #i3,#i4{
+            border: 2px solid rgb(231, 222, 222);
+            width:  63%;
+            height: 50px;
+            border-radius: 6px;
+            margin-top: 2%;
+            padding-left: 2%;
+
+        }
+        #i5{
+            border: 2px solid rgb(231, 222, 222);
+            width:  63%;
+            height: 150px;
+            border-radius: 6px;
+            margin-top: 2%;
+            padding-left: 2%;
+
+        }
+        ::placeholder{
+            color: grey;
+        }
+        .send{
+            background: white;
+            margin-top: 2%;
+            padding : 3%;
+            width: 15%;
+            position: relative;
+            left: 48%;
+            border-radius: 5px;
+            border: 2px solid rgb(107, 107, 107);
+            color: white;
+            font-size: larger;
+            background-color: rgba(255, 255, 255, 0);
+            display: block;
+        }
+        .send:hover{
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="menubar">
+        <a href="#int"><img id="logo" src="logo.png" alt="my logo"></a>
+        <div class="menu2">
+            <div class="menu"><a class="menul" href="#about">About</a></div>
+            <div class="menu"><a class="menul" href="#skill">Skill</a></div>
+            <div class="menu"><a class="menul" href="#project">Project</a></div>
+            <div class="menu"><a class="menul" href="#contact">Contact</a></div>
+            <a class="plink" target="_blank" href="Resume.pdf"><button class="menu re">Resume</button></a>
+        </div>
+    </div>
+    <section id="int">
+        <div class="int">
+            <div class="name1">
+                <h3 class="name"> &nbsp;Hello!! &nbsp;&nbsp; I'm</h3>
+                <h1 class="name">AGHERA KRUTIK</h1>
+                <p class="name intro"> &nbsp;&nbsp;
+                    I'm a Frontend Web Developer building the Front-end of Websites and 
+                    Web Applications that leads to the success of the overall product.
+                     and also a competitive codder.
+                    Styding in 2nd year of computer engineering at 
+                    VISHWAKARMA government engineering collage.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div id="about-page">
+            <div class="row col1">
+                <h2 class="kang" style="color: #ff004f;">ABOUT ME</h2>
+                <p class="p2">
+                    I am studying at VGEC collage. 
+                    and doing computer engineering here, 
+                </p>
+                <p class="p2">
+                    I also do competitive Programing 
+                    in various platform my profiles are given under
+                </p>
+                <p class="p2">
+                    I newly started freelancing and learning 
+                    Web - devloping and designing...
+                </p>
+                <div class="nav1">
+                    <div class="tool active" onclick="opentab('edu')">Education</div>
+                    <div class="tool" onclick="opentab('cp')">Competitive Programing</div>
+                    <div class="tool" onclick="opentab('fp')">Freelancing Profile</div>
+                </div>
+                <div class="tcontent">
+                    
+                        <table class="tline active-t" id="edu">
+                            <tr>
+                                <td class="title">March-2019</td>
+                            </tr>
+                            <tr>
+                                <td class="title redt left">From Swaminarayan Gurukul</td>
+                                <td class="title redt ">83.33%</td>
+                            </tr>
+                            <tr>
+                                <td class="title">May-2021</td>
+                            </tr>
+                            <tr>
+                                <td class="title redt left">From Alpha High School</td>
+                                <td class="title redt ">89.00%</td>
+                            </tr>
+                            <tr>
+                                <td class="title">2021 - 2025</td>    
+                            </tr>
+                            <tr>
+                                <td class="title redt">At Vishwakarma Engineering Collage</td>
+                            </tr>
+                            <tr>
+                                <td class="title redt left">Sem - 1</td>
+                                <td class="title redt">9.37 spi</td>
+                            </tr>
+                        </table>
+                    <table class="tline" id="cp">
+                        <tr>
+                            <td class="title right">Plateform</td>
+                            <td class="title">IDs</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="redt right">Codechef</td>
+                            <td><a href="#" class="clink">Krutik_001</a></td>
+                        </tr>
+                        <tr>
+                            <td class="redt right">Hackerrank</td>
+                            <td><a href="#" class="clink">Krutik_30</a></td>
+                        </tr>
+                        <tr>
+                            <td class="redt right">Geeks for Geek</td>
+                            <td><a href="#" class="clink">Krutik_30</a></td>
+                        </tr>
+                        <tr>
+                            <td class="redt right">Leetcode</td>
+                            <td><a href="#" class="clink">Krutik_01</a></td>
+                        </tr>
+                        <tr>
+                            <td class="redt right">Github</td>
+                            <td><a href="#" class="clink">Krutik30</a></td>
+                        </tr>
+                    </table>
+                    <table class="tline " id="fp">
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row col2">
+                    <img src="myphoto.jpg" alt="photo">
+            </div>
+        </div>
+    </section>
+
+    <section id="skill">
+        <div id="skill-page">
+            <h2 class="sktitle">MY SKILL</h2>
+            <div class="skills">
+                <div class="scon">
+                    <h3 class="subtit">Web-Devloping</h3>
+                    <div class="subcon">
+                        <p>
+                            I was learning Web-devloping from starting of 2022 
+                            and from this diwali i started freelancing.
+                            The more customer i get , the work is being more facinating...
+                        </p>
+                    </div>
+                </div>
+                <div class="simg">
+                    <img class="subimg" src="wd.png" alt="Web-Devloping">
+                </div>
+            </div>
+            <div class="skills">
+                <div class="simg">
+                    <img class="subimg" src="wd2.png" alt="Web-designing">
+                </div>
+                <div class="scon">
+                    <h3 class="subtit">Web-Designing</h3>
+                    <p class="subcon">
+                        In the begining , I was making Websites blindly
+                        but after knowing the designing part , I started 
+                        Web-designing and then appling the tools to make the thing happen...
+                    </p>
+                </div>
+            </div>
+
+            <div class="skills">
+                <div class="scon">
+                    <h3 class="subtit">Coding</h3>
+                    <p class="subcon">
+                        So far we know that this is not a skill but 
+                        I use Problem solving technique and help 
+                        new students by making blogs... 
+                    </p>
+                </div>
+                <div class="simg">
+                    <img class="subimg" src="co.png" alt="coding">
+                </div>
+            </div>
+                
+            <div class="skills">
+                <div class="simg">
+                    <img class="subimg" src="il.png" alt="Illustrater">
+                </div>
+                <div class="scon">
+                    <h3 class="subtit">Illustrater</h3>
+                    <p class="subcon">
+                        I started this app as a editor, but after a time 
+                        i learnt making logos , setting layors by this...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project">
+        <h2 class="sktitle">Projects</h2>
+        <div id="project-page">
+            <a class="plink" href="#">
+                <div class="pbox">
+                    <div class="cgif">
+                        <img class="igif" src="fb.gif" alt="flappy bird">
+                    </div>
+                    <h3 class="itit">Flappy Bird</h3>
+                </div>
+            </a>
+            <a class="plink" href="#">
+                <div class="pbox">
+                    <div class="cgif">
+                        <img class="igif" src="menu.jpg" alt="Cafe Menu">
+                    </div>
+                    <h3 class="itit">Cafe Menu</h3>
+                </div>
+            </a>
+            <a class="plink" href="#">
+                <div class="pbox">
+                    <div class="cgif">
+                        <img class="igif" src="ttt.jpg" alt="Tic-Tak-Toe">
+                    </div>
+                    <h3 class="itit">Tic-Tak-Toe</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section id="contact">
+        <div id="contact-page">
+            <h2 class="sktitle">Contact Me</h2>
+            <span>
+                <input id="i1" type="text" placeholder="First name">
+            </span>
+            <span>
+                <input id="i2" type="text" placeholder="Surname">
+            </span>
+            <div>
+                <input id="i3" type="email" placeholder="Enter E-mail address">
+            </div>
+            <div>
+                <input id="i4" type="text" placeholder="Subject">
+            </div>
+            <textarea name="msg" id="i5" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <button class="send">Send Me</button>
+
+        </div>
+    </section>
+</body>
+<script>
+
+    var tablinks = document.getElementsByClassName("tool");
+    var tabconts = document.getElementsByClassName("tline");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active");
+        }
+        for(tabcont of tabconts){
+            tabcont.classList.remove("active-t");
+        }
+
+        event.currentTarget.classList.add("active");
+        document.getElementById(tabname).classList.add("active-t");
+    }
+
+</script>
+</html>
